@@ -5,10 +5,12 @@
     <title>Hello, WebVR! • A-Frame</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
   </head>
   <body>
     <a-scene background="color: #FAFAFA">
         <a-assets>
+            <a-mixin id="teleport" teleport-controls="type: parabolic; button: trigger; cameraRig: #cameraRig; defaultPlaneSize: 1000; "></a-mixin>
             <img id="background" src="texture/1.jpg">
             <img id="forground" src="texture/3.jpg">
             <img id="dah~" src="texture/2.jpg">
@@ -18,6 +20,12 @@
       <a-sphere src="#forground" position="0 1.25 -5" radius="1.25" shadow></a-sphere>
      <a-box src="#dah~" position="4 1 -5" scale="2 2 2" rotation="-90 0 0" width="1" height="1" length="1" shadow></a-box>
      <a-sky src="#sky"></a-sky>
+     <a-entity id="cameraRig" position="0 0.1 0">
+        <a-entity camera wasd-controls look-controls></a-entity>
+        <a-entity id="rightHand" mixin="teleport" laser-controls="hand: right" vive-controls="hand: right" oculus-go-controls="hand: right"></a-entity>
+        <a-entity id="leftHand" mixin="teleport" laser-controls="hand: left" vive-controls="hand: left" oculus-go-controls="hand: left"></a-entity>
+</a-entity>
+
     </a-scene>
   </body>
 </html>
