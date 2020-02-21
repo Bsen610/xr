@@ -7,6 +7,7 @@
   <meta name="description" content="Hello, WebVR! • A-Frame">
   <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
 
 </head>
 
@@ -14,10 +15,25 @@
     <a-scene>
         <a-assets>
             <a-asset-item id="car" src="assets/3D_model/car.gltf"></a-asset-item>
-        </a-assets>
-        <a-entity environment="preset: tron"></a-entity>
+            <a-mixin id="teleport" teleport-controls="type: parabolic; button: trigger; cameraRig: #cameraRig; defaultPlaneSize: 1000; "></a-mixin>
 
-        <a-entity gltf-model="#car"></a-entity>
+        </a-assets>
+        <a-entity environment="preset: forest"></a-entity>
+
+        <a-entity gltf-model="#car" position="-0.6 -0.5 -1.8" scale="1.2 1.2 1.2"></a-entity>
+
+        <a-entity camera look-controls position="0 1.8 0"></a-entity>
+
+      
+
+          <a-entity id="cameraRig" position="0 0.1 0">
+            <a-entity camera wasd-controls look-controls></a-entity>
+            <a-entity id="rightHand" mixin="teleport" laser-controls="hand: right" vive-controls="hand: right" oculus-touch-controls="hand: right"></a-entity>
+            <a-entity id="leftHand" mixin="teleport" laser-controls="hand: left" vive-controls="hand: left" oculus-touch-controls="hand: left"></a-entity>
+    </a-entity>
+    
     </a-scene>
 </body>
 </html>
+
+
