@@ -7,24 +7,39 @@
   <meta name="description" content="Hello, WebVR! • A-Frame">
   <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
   <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+  <script src="https://unpkg.com/aframe-entity-generator-component@3.0.2/dist/aframe-entity-generator-component.min.js"></script>
+<script src="https://unpkg.com/aframe-randomizer-components@3.0.2/dist/aframe-randomizer-components.min.js"></script>
 
 </head>
 
 <body>
-    <a-scene>
-        <a-assets>
-            <a-asset-item id="car" src="assets/3D_model/car.gltf"></a-asset-item>
-            <a-mixin id="teleport" teleport-controls="type: parabolic; button: trigger; cameraRig: #cameraRig; defaultPlaneSize: 1000; "></a-mixin>
+      <a-scene physics="debug:true; gravity: -5">
 
-        </a-assets>
+        <a-assets>
+          <a-asset-item id="person-obj" src="assets/3D_model/Low_People.obj"></a-asset-item>
+          <a-asset-item id="car-obj" src="assets/3D_model/car1.obj"></a-asset-item>
+          <a-asset-item id="car-mtl" src="assets/3D_model/car1.mtl"></a-asset-item>
+          </a-asset-item>
+    
+          <!-- <a-mixin id="box" geometry="primitive: box; radius: 1"></a-mixin> -->
+          <a-mixin id="model" obj-model="obj: #person-obj" scale=".01 .01 .01"></a-mixin>
+    
+          <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10" random-color
+            dynamic-body="linearDamping:.001 angularDamping:-1"></a-mixin>
+
+            
+            <a-mixin id="teleport" teleport-controls="type: parabolic; button: trigger; cameraRig: #cameraRig; defaultPlaneSize: 1000; "></a-mixin>
+            </a-asset-item>
+         </a-assets>
+
         <a-entity environment="preset: forest"></a-entity>
 
-        <a-entity gltf-model="#car" position="-0.6 -0.5 -1.8" scale="1.2 1.2 1.2"></a-entity>
+        <a-entity obj-model="obj: #car-obj; mtl: #car-mtl;" scale="1.5 1.5 1.5" position="1 0.4 1" static-body="shape:hull"></a-entity>
 
-        <a-entity camera look-controls position="0 1.8 0"></a-entity>
-
-      
+        <a-entity entity-generator="mixin: random-1 model; num: 300"></a-entity>
+        <a-box static-body id="forest" width=1000 height=0.001 depth=1000 visible="false"></a-box>
 
           <a-entity id="cameraRig" position="0 0.1 0">
             <a-entity camera wasd-controls look-controls></a-entity>

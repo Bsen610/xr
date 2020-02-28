@@ -1,0 +1,72 @@
+# Blender MTL File: 'Hansen_A&TPROJ1.blend'
+# Material Count: 5
+
+newmtl Body.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.572727 0.572727 0.572727
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Body_Normal.png
+map_Kd /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Body_BaseColor.png
+map_Ns /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Body_Roughness.png
+refl /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Body_Metallic.png
+
+newmtl Grill.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 4.400000 /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Grill_Normal.png
+map_Kd /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Grill_BaseColor.png
+map_Ns /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Grill_Roughness.png
+refl /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Grill_Metallic.png
+
+newmtl Material.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Disk_Normal.png
+map_Kd /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Disk_BaseColor.png
+map_Ns /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Disk_Roughness.png
+refl /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Disk_Metallic.png
+
+newmtl Rims.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Rims_Normal.png
+map_Kd /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Rims_BaseColor.png
+map_Ns /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Rims_Roughness.png
+refl /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Rims_Metallic.png
+
+newmtl Windows.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Windows_Normal.png
+map_Kd /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Windows_BaseColor.png
+map_Ns /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Windows_Roughness.png
+refl /Volumes/Hans'drive/Blender/Escort_SubPaint_Export/Escort_Texture/Ford_escort_RS1800_Body_Windows_Metallic.png
